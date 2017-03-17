@@ -1,4 +1,4 @@
-exo搭建
+hexo搭建
 
 进入 Hexo官网，按照教程npm install 各种之后，生成Hexo工程，Hexo sever就启动起来了，同样你在服务器端也可以直接这样搞，或者本地搞定了直接rsync到服务器上去也行，又或者直接github上建一个git仓库，本地搞定了推到github，服务器端pull github上的代码就可以了。
 
@@ -41,3 +41,21 @@ $ lsof -i:[port]
 $ ps aux|grep hexo
 $ kill pid(进程的id)
 完...
+
+
+
+
+---
+
+shadowsocks
+启动  
+ssserver -p 8388 -k passwordh -m rc4-md5  -d start  
+p：服务器端口  
+k：认证密码  
+m：加密方式  
+
+
+
+安装  
+1. apt-get install python-pip python-m2crypto
+2. pip install shadowsocks
