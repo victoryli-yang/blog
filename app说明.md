@@ -43,19 +43,46 @@ $ kill pid(进程的id)
 完...
 
 
-
+---
+第一步 nodejs
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
+nvm install stable
 
 ---
 
-shadowsocks
+---
+第二步 淘宝源
+npm install cnpm -g --registry=https://registry.npm.taobao.org
+
+---
+
+第三步 hexo
+
+cnpm install -g hexo-cli
+
+安装 yelee 主题
+git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee
+---
+
+第四步 shadowsocks
 启动  
 ssserver -p 8388 -k passwordh -m rc4-md5  -d start  
 p：服务器端口  
 k：认证密码  
 m：加密方式  
 
-
-
 安装  
-1. apt-get install python-pip python-m2crypto
-2. pip install shadowsocks
+apt-get install python-pip python-m2crypto
+apt-get install -y python-setuptools
+pip install --upgrade pip
+pip install shadowsocks
+
+卸载
+pip uninstall shadowsocks
+---
+
+第五步 forever
+
+cnpm install forever -g
+---
