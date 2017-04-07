@@ -86,3 +86,32 @@ pip uninstall shadowsocks
 
 cnpm install forever -g
 ---
+// windows 安装 yarn 的方式
+// https://yarnpkg.com/zh-Hans/docs/install#windows-tab
+// 直接下载安装包, 双击之后下一步就可以安装
+
+// 更改 yarn 的镜像源
+yarn config set registry https://registry.npm.taobao.org
+
+
+// 添加 package
+// 对应 cnpm install koa
+yarn add koa
+
+// 指定版本
+// 如果安装的时候 package 已经存在，只是版本不同，则会直接覆盖
+yarn add koa@2
+
+// 指定依赖类型，默认是安装到 dependencies
+yarn add koa@2 --dev
+
+
+// 移除 package, 不需要指定版本号
+// 对应 cnpm uninstall
+yarn remove koa
+
+
+// 安装所有依赖
+// 对应 cnpm install
+// 只输入 yarn 也可以，不过不应该省略
+yarn install
